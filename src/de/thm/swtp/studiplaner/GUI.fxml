@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-	
+
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.BorderPane?>
-	
-<BorderPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.thm.swtp.studiplaner.Controller">
-	<!-- TODO Add Nodes -->
+<?import javafx.scene.text.Font?>
+
+
+<BorderPane prefHeight="768.0" prefWidth="1366.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.141" fx:controller="de.thm.swtp.studiplaner.Controller">
+   <top>
+      <Label alignment="TOP_RIGHT" prefHeight="100.0" prefWidth="650.0" text="StudiPlaner" BorderPane.alignment="CENTER">
+         <font>
+            <Font name="DejaVu Sans Bold" size="96.0" />
+         </font>
+      </Label>
+   </top>
 </BorderPane>
