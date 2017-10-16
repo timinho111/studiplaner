@@ -1,1 +1,1 @@
-StudiPlaner
+Studiplaner
