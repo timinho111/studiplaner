@@ -1,6 +1,36 @@
+.menubutton {
+    -fx-background-color: 
+        #000000,
+        linear-gradient(#7ebcea, #2f4b8f),
+        linear-gradient(#426ab7, #263e75),
+        linear-gradient(#395cab, #223768);
+    -fx-background-insets: 0,0,0,0;
+    -fx-background-radius: 1,1,1,1;
+    -fx-font-family: "Oxygen Light";
+    -fx-font-size: 20px;
+    -fx-text-fill: white;
+}
+
+.menubutton:hover{
+    -fx-background-color: 
+        #000000,
+        linear-gradient(#7ebcea, #2f4b8f),
+        linear-gradient(#426ab7, #263e75),
+        linear-gradient(#395cab, #223768);
+    -fx-background-insets: 2,2,2,2;
+    -fx-background-radius: 1,1,1,1;
+    -fx-font-family: "Oxygen Light";
+    -fx-font-size: 20px;
+    -fx-text-fill: white;
+}
+
+.vbox{
+	-fx-background-color: white;
+}
+
 .background{
 	-fx-background-color:
-	linear-gradient(#d0e4f7 0%, #73b1e7 24%, #0a77d5 50%, #539fe1 79%, #87bcea 100%);
+	linear-gradient(#3333ff 0%, #0000ff 24%, #0000cc 50%, #000099 79%, #000066 100%);
  
 	
 }
