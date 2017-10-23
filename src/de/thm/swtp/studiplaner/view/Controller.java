@@ -37,12 +37,13 @@ public class Controller implements Initializable{
     private Button noten_button;
     @FXML
     private Button login_button;
+    
 
 
     @FXML
     private void ButtonAction(ActionEvent e) throws IOException
     {
-
+    	
         Stage stage=new Stage();
         Parent root=FXMLLoader.load(getClass().getResource("Dashboard.fxml"));
 
@@ -95,10 +96,7 @@ public class Controller implements Initializable{
             root= FXMLLoader.load(getClass().getResource("Noten.fxml"));
         }
 
-        Scene scene= new Scene(root,1366,768);
-        stage.setMaximized(true);
-        stage.setFullScreen(true);
-        stage.setScene(scene);
+        stage.getScene().setRoot(root);
         stage.show();
 
     }
