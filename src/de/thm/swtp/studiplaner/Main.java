@@ -1,7 +1,6 @@
 package de.thm.swtp.studiplaner;
 	
 import javafx.application.Application;
-import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;

@@ -1,52 +1,76 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.web.*?>
-<?import java.lang.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.shape.*?>
-<?import javafx.scene.text.*?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TableColumn?>
-<?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane prefHeight="768.0" prefWidth="1366.0" styleClass="background" stylesheets="@../application.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.thm.swtp.studiplaner.Controller">
-    <left>
-        <VBox prefHeight="200.0" prefWidth="300.0" BorderPane.alignment="CENTER" />
-    </left>
-    <top>
-        <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
-            <children>
-                <ToolBar prefHeight="40.0" prefWidth="1345.0">
-                    <items>
-                        <Button id="dashboard_button" fx:id="dashboard_button" mnemonicParsing="false" onAction="#ButtonAction" prefWidth="160.0" text="Dashboard" />
-                        <Button fx:id="kalender_button" mnemonicParsing="false" onAction="#ButtonAction" prefWidth="160.0" text="Kalender" />
-                        <Button fx:id="module_button" mnemonicParsing="false" onAction="#ButtonAction" prefWidth="160.0" text="Module" />
-                        <Button fx:id="todo_button" mnemonicParsing="false" onAction="#ButtonAction" prefWidth="160.0" text="Todo" />
-                        <Button fx:id="stundenplan_button" mnemonicParsing="false" onAction="#ButtonAction" prefWidth="160.0" text="Stundenplan" />
-                        <Button fx:id="mensaplan_button" mnemonicParsing="false" onAction="#ButtonAction" prefWidth="160.0" text="Mensaplan" />
-                        <Button fx:id="klausurplan_button" mnemonicParsing="false" onAction="#ButtonAction" prefWidth="160.0" text="Klausurplan" />
-                        <Button fx:id="noten_button" mnemonicParsing="false" onAction="#ButtonAction" prefWidth="160.0" text="Notenübersicht" />
-                    </items>
-                </ToolBar>
-                <Label text="StudiPlaner">
-                    <font>
-                        <Font size="96.0" />
-                    </font>
-                </Label>
-            </children>
-        </VBox>
-    </top>
-    <center>
-        <Label text="Todo" BorderPane.alignment="CENTER">
-            <font>
-                <Font size="96.0" />
-            </font>
-        </Label>
-    </center>
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="768.0" prefWidth="1366.0" styleClass="background" stylesheets="@../application.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.thm.swtp.studiplaner.view.Controller">
+   <top>
+      <VBox alignment="TOP_RIGHT" prefHeight="172.0" prefWidth="1366.0">
+         <children>
+            <Label alignment="TOP_RIGHT" contentDisplay="CENTER" prefHeight="100.0" prefWidth="650.0" text="StudiPlaner" textAlignment="RIGHT" textFill="WHITE">
+               <font>
+                  <Font name="Oxygen Regular" size="96.0" />
+               </font>
+            </Label>
+            <Line startX="1366.0" stroke="WHITE" strokeWidth="6.0" />
+            <HBox alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" nodeOrientation="LEFT_TO_RIGHT" opacity="0.8" prefHeight="40.0" prefWidth="1366.0" styleClass="vbox">
+               <children>
+                  <Button fx:id="dashboard_button" alignment="TOP_CENTER" contentDisplay="TOP" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#ButtonAction" prefHeight="45.0" prefWidth="158.0" styleClass="menubutton" text="Dashboard" textAlignment="CENTER" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font name="Oxygen Light" size="20.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="kalender_button" alignment="TOP_CENTER" contentDisplay="TOP" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#ButtonAction" prefHeight="45.0" prefWidth="174.0" styleClass="menubutton" text="Kalender" textAlignment="CENTER" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font name="Oxygen Light" size="20.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="module_button" alignment="TOP_CENTER" contentDisplay="TOP" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#ButtonAction" prefHeight="45.0" prefWidth="164.0" styleClass="menubutton" text="Module" textAlignment="CENTER" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font name="Oxygen Light" size="20.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="todo_button" alignment="TOP_CENTER" contentDisplay="TOP" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#ButtonAction" prefHeight="45.0" prefWidth="146.0" styleClass="menubutton" text="ToDo" textAlignment="CENTER" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font name="Oxygen Light" size="20.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="stundenplan_button" alignment="TOP_CENTER" contentDisplay="TOP" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#ButtonAction" prefHeight="45.0" prefWidth="174.0" styleClass="menubutton" text="Stundenplan" textAlignment="CENTER" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font name="Oxygen Light" size="20.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="mensaplan_button" alignment="TOP_CENTER" contentDisplay="TOP" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#ButtonAction" prefHeight="45.0" prefWidth="172.0" styleClass="menubutton" text="Mensaplan" textAlignment="CENTER" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font name="Oxygen Light" size="20.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="klausurplan_button" alignment="TOP_CENTER" contentDisplay="TOP" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#ButtonAction" prefHeight="45.0" prefWidth="172.0" styleClass="menubutton" text="Klausurplan" textAlignment="CENTER" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font name="Oxygen Light" size="20.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="noten_button" alignment="TOP_CENTER" contentDisplay="TOP" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#ButtonAction" prefHeight="45.0" prefWidth="206.0" styleClass="menubutton" text="Notenübersicht" textAlignment="CENTER" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font name="Oxygen Light" size="20.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+            <Line startX="1366.0" stroke="WHITE" strokeWidth="6.0" />
+         </children>
+      </VBox>
+   </top>
+   <center>
+      <Label text="ToDo Liste" BorderPane.alignment="CENTER">
+         <font>
+            <Font size="100.0" />
+         </font>
+      </Label>
+   </center>
 </BorderPane>

@@ -1,22 +1,18 @@
-package de.thm.swtp.studiplaner;
+package de.thm.swtp.studiplaner.view;
 
-import javafx.event.ActionEvent;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
-import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
-
-import javax.swing.border.Border;
 
 public class Controller implements Initializable{
 
@@ -48,58 +44,60 @@ public class Controller implements Initializable{
     {
 
         Stage stage=new Stage();
-        Parent root=FXMLLoader.load(getClass().getResource("view/Dashboard.fxml"));
+        Parent root=FXMLLoader.load(getClass().getResource("Dashboard.fxml"));
 
         if(e.getSource()==login_button)
         {
             stage=(Stage) login_button.getScene().getWindow();
-            root= FXMLLoader.load(getClass().getResource("view/Dashboard.fxml"));
+            root= FXMLLoader.load(getClass().getResource("Dashboard.fxml"));
         }
 
         if(e.getSource()==dashboard_button)
         {
             stage=(Stage) dashboard_button.getScene().getWindow();
-            root= FXMLLoader.load(getClass().getResource("view/Dashboard.fxml"));
+            root= FXMLLoader.load(getClass().getResource("Dashboard.fxml"));
         }
         if(e.getSource()==kalender_button)
         {
             stage=(Stage) kalender_button.getScene().getWindow();
-            root= FXMLLoader.load(getClass().getResource("view/Kalender.fxml"));
+            root= FXMLLoader.load(getClass().getResource("Kalender.fxml"));
         }
         if(e.getSource()==module_button)
         {
             stage=(Stage) module_button.getScene().getWindow();
-            root= FXMLLoader.load(getClass().getResource("view/Module.fxml"));
+            root= FXMLLoader.load(getClass().getResource("Module.fxml"));
         }
         if(e.getSource()==todo_button)
         {
             stage=(Stage) todo_button.getScene().getWindow();
-            root= FXMLLoader.load(getClass().getResource("view/ToDo.fxml"));
+            root= FXMLLoader.load(getClass().getResource("ToDo.fxml"));
         }
         if(e.getSource()==stundenplan_button)
         {
             stage=(Stage) stundenplan_button.getScene().getWindow();
-            root= FXMLLoader.load(getClass().getResource("view/Stundenplan.fxml"));
+            root= FXMLLoader.load(getClass().getResource("Stundenplan.fxml"));
         }
         if(e.getSource()==klausurplan_button)
         {
             stage=(Stage) klausurplan_button.getScene().getWindow();
-            root= FXMLLoader.load(getClass().getResource("view/Klausurplan.fxml"));
+            root= FXMLLoader.load(getClass().getResource("Klausurplan.fxml"));
         }
 
         if(e.getSource()==mensaplan_button)
         {
             stage=(Stage) mensaplan_button.getScene().getWindow();
-            root=FXMLLoader.load(getClass().getResource("view/Mensaplan.fxml"));
+            root=FXMLLoader.load(getClass().getResource("Mensaplan.fxml"));
         }
 
         if(e.getSource()==noten_button)
         {
             stage=(Stage) noten_button.getScene().getWindow();
-            root= FXMLLoader.load(getClass().getResource("view/Noten.fxml"));
+            root= FXMLLoader.load(getClass().getResource("Noten.fxml"));
         }
 
         Scene scene= new Scene(root,1366,768);
+        stage.setMaximized(true);
+        stage.setFullScreen(true);
         stage.setScene(scene);
         stage.show();
 
