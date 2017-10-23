@@ -21,6 +21,7 @@
     </left>
     <top>
         <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+
             <children>
                 <ToolBar prefHeight="40.0" prefWidth="1345.0">
                     <items>
@@ -34,6 +35,7 @@
                         <Button fx:id="noten_button" mnemonicParsing="false" onAction="#ButtonAction" prefWidth="160.0" text="Notenübersicht" />
                     </items>
                 </ToolBar>
+
                 <Label text="StudiPlaner">
                     <font>
                         <Font size="96.0" />
@@ -43,7 +45,7 @@
         </VBox>
     </top>
     <center>
-        <Label text="Stundenplan" BorderPane.alignment="CENTER">
+        <Label text="Mensaplan" BorderPane.alignment="CENTER">
             <font>
                 <Font size="96.0" />
             </font>
