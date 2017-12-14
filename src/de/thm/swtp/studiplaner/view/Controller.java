@@ -37,12 +37,14 @@ public class Controller implements Initializable{
     private Button noten_button;
     @FXML
     private Button login_button;
-    
+
+
 
 
     @FXML
     private void ButtonAction(ActionEvent e) throws IOException
     {
+
     	
         Stage stage=new Stage();
         Parent root=FXMLLoader.load(getClass().getResource("Dashboard.fxml"));
