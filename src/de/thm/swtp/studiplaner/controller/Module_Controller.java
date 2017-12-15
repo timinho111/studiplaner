@@ -62,7 +62,7 @@ public class Module_Controller implements Initializable{
     private TextArea notizen;
 
     @FXML
-    private ComboBox<String> modulauswahl;
+    private ComboBox<String> modulauswahl=new ComboBox<>();
 
     @FXML
     private Button speichern_bezeichnung;
@@ -105,6 +105,32 @@ public class Module_Controller implements Initializable{
 
     @FXML
     private Button loeschen_notizen;
+
+    @FXML
+    private TextField add_bezeichnung;
+
+    @FXML
+    private TextField add_dozent;
+
+    @FXML
+    private TextField add_raum;
+
+    @FXML
+    private TextField add_vorlesungsdatum;
+
+    @FXML
+    private TextField add_creditpoints;
+
+    @FXML
+    private TextField add_note;
+
+    @FXML
+    private Button add_save;
+
+    @FXML
+    private Button add_reset;
+
+
 
     @FXML
     protected void SaveButtonAction(ActionEvent event)
@@ -195,10 +221,10 @@ public class Module_Controller implements Initializable{
     }
 
     @FXML
-    protected void AddModul (ActionEvent event) throws IOException
+    protected void AddModul(ActionEvent event) throws IOException
     {
         try{
-            FXMLLoader fxmlLoader= new FXMLLoader(getClass().getResource("de/thm/swtp/studiplaner/view/fxml/Modul_Dialog.fxml"));
+            FXMLLoader fxmlLoader= new FXMLLoader(getClass().getResource("/de/thm/swtp/studiplaner/view/fxml/Modul_Dialog.fxml"));
             Parent root1 = (Parent) fxmlLoader.load();
             Stage stage = new Stage();
             stage.setScene(new Scene(root1));
@@ -222,7 +248,6 @@ public class Module_Controller implements Initializable{
                     module_object.remove(m);
                     module.remove(m.getName());
                     modulauswahl.getItems().addAll(module);
-
                     modulauswahl.getSelectionModel().selectFirst();
                 }
             }
@@ -320,6 +345,47 @@ public class Module_Controller implements Initializable{
 
     }
 
+
+    @FXML
+    protected void Add_SaveButtonAction(ActionEvent event)
+    {
+        Modul m=new Modul(
+                add_bezeichnung.getText(),
+                add_dozent.getText(),
+                add_raum.getText(),
+                add_vorlesungsdatum.getText(),
+                new IntegerStringConverter().fromString(add_creditpoints.getText()),
+                new FloatStringConverter().fromString(add_note.getText()));
+        module_object.add(m);
+        module.add(m.getName());
+        modulauswahl.getItems().add(m.getName());
+        for (String n:module) {
+            System.out.println(n);
+        }
+
+        //modulauswahl.getSelectionModel( ).selectFirst();
+
+        Stage stage = (Stage) add_save.getScene().getWindow();
+        stage.close();
+        //modulauswahl.getItems().clear();
+        //modulauswahl.getItems().addAll(module);
+
+    }
+
+    @FXML
+    protected void Add_DeleteButtonAction(ActionEvent event)
+    {
+        add_bezeichnung.clear();
+        add_dozent.clear();
+        add_raum.clear();
+        add_vorlesungsdatum.clear();
+        add_creditpoints.clear();
+        add_note.clear();
+    }
+
+
+
+
     @Override
     public void initialize(URL location, ResourceBundle resources)
     {
@@ -330,8 +396,8 @@ public class Module_Controller implements Initializable{
         Modul modul3=new Modul("Modulname3", "Dozent1", "C3","11:30", 7, 2.2F);
         Modul modul4=new Modul("Modulname4", "Dozent1", "A5","14:00", 8, 5.0F, "HALLO WELT! ICH BIN MODUL4");
         Modul modul5=new Modul("Modulname5", "Dozent1", "B7","15:40", 4, 4.0F, "HALLO WELT! ICH BIN MODUL5");
-        List<String> modulliste;
-        Modulverwaltung modulverwaltung=new Modulverwaltung(modul1,modul2,modul3,modul4,modul5);
+        //List<String> modulliste;
+        //Modulverwaltung modulverwaltung=new Modulverwaltung(modul1,modul2,modul3,modul4,modul5);
 
 
         module_object=FXCollections.observableArrayList(modul1,modul2,modul3,modul4,modul5);
@@ -339,6 +405,7 @@ public class Module_Controller implements Initializable{
 
         modulauswahl.setPromptText("Modul auswählen");
         modulauswahl.getItems().addAll(module);
+
 
 
 
@@ -362,6 +429,7 @@ public class Module_Controller implements Initializable{
     }
 
         });
+
 
 
     }
