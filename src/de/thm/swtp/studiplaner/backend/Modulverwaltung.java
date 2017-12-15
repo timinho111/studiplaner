@@ -1,10 +1,11 @@
 package de.thm.swtp.studiplaner.backend;
 
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Modulverwaltung {
-    private List<Modul> modulliste;
+    private List<Modul> modulliste=new ArrayList<Modul>();
 
     public Modulverwaltung(Modul... modul)
     {
@@ -27,5 +28,7 @@ public class Modulverwaltung {
     {
         modulliste.remove(m);
     }
+
+    public void AddModul(Modul m) { modulliste.add(m);}
 
 }
