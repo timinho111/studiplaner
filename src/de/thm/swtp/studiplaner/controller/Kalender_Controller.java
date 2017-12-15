@@ -1,4 +1,4 @@
-package de.thm.swtp.studiplaner.view.controllers;
+package de.thm.swtp.studiplaner.controller;
 
 import java.net.URL;
 import java.time.LocalDate;
@@ -10,7 +10,7 @@ import java.util.ResourceBundle;
 import com.sun.javafx.scene.control.skin.DatePickerContent;
 import com.sun.javafx.scene.control.skin.DatePickerSkin;
 
-import de.thm.swtp.studiplaner.backend.Termin;
+import de.thm.swtp.studiplaner.model.Termin;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
@@ -82,6 +82,11 @@ public class Kalender_Controller implements Initializable{
         DatePickerContent pop = (DatePickerContent)datePickerSkin.getPopupContent();
    	 	Node popupContent = datePickerSkin.getPopupContent();
    	 	bp.getChildren().add(popupContent);
+   	 	
+   	 	// Resize bp
+   	 	bp.setTopAnchor(popupContent, 100.0);
+   	 	bp.setRightAnchor(popupContent, 100.0);
+   	 	
 
         List<DateCell> dateCells = getAllDateCells(pop);
 

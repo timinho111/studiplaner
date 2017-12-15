@@ -1,4 +1,4 @@
-package de.thm.swtp.studiplaner.view.controllers;
+package de.thm.swtp.studiplaner.controller;
 
 import java.io.IOException;
 import java.net.URL;
@@ -10,8 +10,8 @@ import java.util.Date;
 import java.util.List;
 import java.util.ResourceBundle;
 
-import de.thm.swtp.studiplaner.backend.Modul;
-import de.thm.swtp.studiplaner.backend.Modulverwaltung;
+import de.thm.swtp.studiplaner.model.Modul;
+import de.thm.swtp.studiplaner.model.Modulverwaltung;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;

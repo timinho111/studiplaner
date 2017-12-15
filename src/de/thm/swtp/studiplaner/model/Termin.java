@@ -1,4 +1,4 @@
-package de.thm.swtp.studiplaner.backend;
+package de.thm.swtp.studiplaner.model;
 
 public class Termin {
 

@@ -1,4 +1,4 @@
-package de.thm.swtp.studiplaner.view.controllers;
+package de.thm.swtp.studiplaner.controller;
 
 import java.io.IOException;
 import java.net.URL;
@@ -16,8 +16,7 @@ import javafx.scene.control.ListView;
 import javafx.scene.control.TableView;
 import javafx.stage.Stage;
 
-public class Stundenplan_Controller implements Initializable{
-
+public class Noten_Controller implements Initializable{
 
 
     @Override

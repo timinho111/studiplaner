@@ -1,4 +1,4 @@
-package de.thm.swtp.studiplaner.view.controllers;
+package de.thm.swtp.studiplaner.controller;
 
 import java.io.IOException;
 import java.net.URL;
