@@ -1,5 +1,6 @@
 package de.thm.swtp.studiplaner.backend;
 
-public class Kalender {
-
+public class Kalenderverwaltung {
+	
+	
 }
