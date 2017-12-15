@@ -15,59 +15,153 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="768.0" prefWidth="1366.0" styleClass="background" stylesheets="@../../application.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.thm.swtp.studiplaner.view.controllers.Module_Controller">
-   <top>
-      <VBox prefHeight="0.0" prefWidth="0.0" BorderPane.alignment="CENTER">
-         <children>
-            <HBox prefHeight="100.0" prefWidth="200.0">
-               <children>
-                  <Label alignment="BOTTOM_RIGHT" prefHeight="188.0" prefWidth="716.0">
-                     <font>
-                        <Font name="Oxygen Light" size="45.0" />
-                     </font>
-                  </Label>
-               </children>
-            </HBox>
-            <VBox alignment="TOP_RIGHT" prefHeight="34.0" prefWidth="1372.0">
-               <children>
-                  <Line startX="1366.0" stroke="WHITE" strokeWidth="4.0" />
-                  <Line startX="1366.0" stroke="WHITE" strokeWidth="4.0" />
-               </children>
-            </VBox>
-         </children>
-      </VBox>
-   </top>
-   <bottom>
-      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
-         <children>
-            <Line endX="100.0" endY="500.0" startX="1460.0" startY="500.0" stroke="WHITE" strokeWidth="2.0" />
-         </children>
-      </VBox>
-   </bottom>
-   <left>
-      <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
-         <children>
-            <TableView opacity="0.18" prefHeight="533.0" prefWidth="200.0">
-              <columns>
-                <TableColumn prefWidth="75.0" text="C1" />
-                <TableColumn prefWidth="75.0" text="C2" />
-              </columns>
-            </TableView>
-            <Line startY="-500.0" stroke="WHITE" strokeWidth="2.0" />
-         </children>
-      </HBox>
-   </left>
-   <right>
-      <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
-         <children>
-            <Line startY="-500.0" stroke="WHITE" strokeWidth="2.0" />
-            <TableView opacity="0.18" prefHeight="533.0" prefWidth="200.0">
-               <columns>
-                  <TableColumn prefWidth="75.0" text="C1" />
-                  <TableColumn prefWidth="75.0" text="C2" />
-               </columns>
-            </TableView>
-         </children>
-      </HBox>
-   </right>
-</BorderPane>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="542.0" prefWidth="1366.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.thm.swtp.studiplaner.view.controllers.Module_Controller">
+   <children>
+      <Label fx:id="modulueberschrift" layoutX="43.0" layoutY="14.0" prefHeight="141.0" prefWidth="750.0" text="TEST_MODUL">
+         <font>
+            <Font size="64.0" />
+         </font>
+      </Label>
+      <Line endX="1230.0" layoutX="115.0" layoutY="130.0" startX="-100.0" />
+      <Label layoutX="507.0" layoutY="64.0" text="Hier Modul auswählen:" />
+      <Label layoutX="56.0" layoutY="142.0" prefHeight="53.0" prefWidth="224.0" text="Moduldaten:">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="56.0" layoutY="211.0" text="Bezeichnung">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="bezeichnung" layoutX="205.0" layoutY="207.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="dozent" layoutX="205.0" layoutY="256.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <Label layoutX="56.0" layoutY="260.0" text="Dozent">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="raum" layoutX="205.0" layoutY="304.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <Label layoutX="56.0" layoutY="308.0" text="Raum">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="vorlesungsdatum" layoutX="205.0" layoutY="357.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <Label layoutX="56.0" layoutY="361.0" text="Vorlesungsdatum">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="creditpoints" layoutX="205.0" layoutY="411.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <Label layoutX="56.0" layoutY="415.0" text="Creditpoints">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="643.0" layoutY="167.0" text="Notizen">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextArea fx:id="notizen" layoutX="718.0" layoutY="163.0" prefHeight="260.0" prefWidth="568.0" />
+      <Button fx:id="modul_add" layoutX="863.0" layoutY="60.0" mnemonicParsing="false" onAction="#AddModul" prefHeight="25.0" prefWidth="150.0" text="Modul Hinzufügen" />
+      <Button fx:id="modul_remove" layoutX="1130.0" layoutY="60.0" mnemonicParsing="false" onAction="#DeleteModul" prefHeight="25.0" prefWidth="150.0" text="Modul Löschen" />
+      <ComboBox fx:id="modulauswahl" layoutX="643.0" layoutY="60.0" prefWidth="150.0" />
+      <Label layoutX="56.0" layoutY="461.0" text="Note">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="note" layoutX="205.0" layoutY="457.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <Button fx:id="speichern_bezeichnung" layoutX="408.0" layoutY="206.0" mnemonicParsing="false" onAction="#SaveButtonAction" text="Speichern">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="speichern_dozent" layoutX="408.0" layoutY="256.0" mnemonicParsing="false" onAction="#SaveButtonAction" text="Speichern">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="speichern_raum" layoutX="408.0" layoutY="304.0" mnemonicParsing="false" onAction="#SaveButtonAction" text="Speichern">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="speichern_vorlesungsdatum" layoutX="408.0" layoutY="356.0" mnemonicParsing="false" onAction="#SaveButtonAction" text="Speichern">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="speichern_creditpoints" layoutX="408.0" layoutY="411.0" mnemonicParsing="false" onAction="#SaveButtonAction" text="Speichern">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="speichern_note" layoutX="408.0" layoutY="457.0" mnemonicParsing="false" onAction="#SaveButtonAction" text="Speichern">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="loeschen_dozent" layoutX="493.0" layoutY="256.0" mnemonicParsing="false" onAction="#DeleteButtonAction" text="Löschen">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="loeschen_raum" layoutX="493.0" layoutY="304.0" mnemonicParsing="false" onAction="#DeleteButtonAction" text="Löschen">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="loeschen_vorlesungsdatum" layoutX="493.0" layoutY="356.0" mnemonicParsing="false" onAction="#DeleteButtonAction" text="Löschen">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="loeschen_creditpoints" layoutX="493.0" layoutY="411.0" mnemonicParsing="false" onAction="#DeleteButtonAction" text="Löschen">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="loeschen_note" layoutX="493.0" layoutY="456.0" mnemonicParsing="false" onAction="#DeleteButtonAction" text="Löschen">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="speichern_notizen" layoutX="718.0" layoutY="457.0" mnemonicParsing="false" onAction="#SaveButtonAction" text="Speichern">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="loeschen_notizen" layoutX="801.0" layoutY="456.0" mnemonicParsing="false" onAction="#DeleteButtonAction" text="Löschen">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

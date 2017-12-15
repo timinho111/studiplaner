@@ -1,5 +1,6 @@
 package de.thm.swtp.studiplaner.backend;
 
+import java.text.DateFormat;
 import java.util.Date;
 
 public class Modul {
@@ -7,11 +8,23 @@ public class Modul {
     private String name;
     private String dozent;
     private String raum;
-    private Date zeit;
+    private String zeit;
     private int cp;
     private float note;
+    private String notizen;
 
-    public Modul(String name, String dozent, String raum, Date zeit, int cp, float note)
+    public Modul(String name, String dozent, String raum, String zeit, int cp, float note, String notizen)
+    {
+        this.name=name;
+        this.dozent=dozent;
+        this.raum=raum;
+        this.zeit=zeit;
+        this.cp=cp;
+        this.note=note;
+        this.notizen=notizen;
+    }
+
+    public Modul(String name, String dozent, String raum, String zeit, int cp, float note)
     {
         this.name=name;
         this.dozent=dozent;
@@ -21,13 +34,47 @@ public class Modul {
         this.note=note;
     }
 
-    public void setZeit(Date zeit) {
+    public Modul(String name, String dozent, String raum, String zeit, int cp)
+    {
+        this.name=name;
+        this.dozent=dozent;
+        this.raum=raum;
+        this.zeit=zeit;
+        this.cp=cp;
+    }
+
+    public Modul(String name, String dozent, String raum, String zeit)
+    {
+        this.name=name;
+        this.dozent=dozent;
+        this.raum=raum;
+        this.zeit=zeit;
+
+    }
+
+    public Modul(String name, String dozent, String raum)
+    {
+        this.name=name;
+        this.dozent=dozent;
+        this.raum=raum;
+    }
+
+    public Modul(String name, String dozent)
+    {
+        this.name=name;
+        this.dozent=dozent;
+    }
+
+    public Modul(String name)
+    {
+        this.name=name;
+    }
+
+    public void setZeit(String zeit) {
         this.zeit = zeit;
     }
 
-    public Date getZeit() {
-        return zeit;
-    }
+    public String getZeit() {return zeit; }
 
     public void setNote(float note) {
         this.note = note;
@@ -69,7 +116,11 @@ public class Modul {
         return raum;
     }
 
-    public void EditModul(String name, String dozent, String raum, Date zeit, int cp, float note){
+    public void setNotizen(String notizen){this.notizen=notizen;}
+
+    public String getNotizen(){ return notizen;}
+
+    public void EditModul(String name, String dozent, String raum, String zeit, int cp, float note){
         this.name=name;
         this.dozent=dozent;
         this.raum=raum;

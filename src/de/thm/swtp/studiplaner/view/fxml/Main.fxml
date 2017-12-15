@@ -22,62 +22,62 @@
             <children>
                 <HBox prefHeight="100.0" prefWidth="200.0">
                     <children>
-                        <Label alignment="BOTTOM_RIGHT" prefHeight="188.0" prefWidth="716.0">
+                        <Label alignment="TOP_LEFT" prefHeight="141.0" prefWidth="503.0" text="StudiPlaner">
                             <font>
-                                <Font name="Oxygen Light" size="45.0" />
+                                <Font size="96.0" />
                             </font>
                         </Label>
-                        <Label alignment="TOP_RIGHT" contentDisplay="CENTER" prefHeight="110.0" prefWidth="646.0" text="StudiPlaner" textAlignment="RIGHT" textFill="WHITE">
-                            <font>
-                                <Font name="Oxygen Regular" size="96.0" />
-                            </font>
-                        </Label>
+                  <Label alignment="TOP_RIGHT" prefHeight="144.0" prefWidth="834.0" text="Hallo XXX !">
+                     <font>
+                        <Font size="36.0" />
+                     </font>
+                  </Label>
                     </children>
                 </HBox>
             </children>
         </VBox>
     </top>
    <center>
-      <TabPane prefHeight="502.0" prefWidth="1149.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+      <TabPane prefHeight="625.0" prefWidth="1366.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
         <tabs>
-            <Tab text="Dashboard" >
+            <Tab text="Dashboard">
             <content>
-                <fx:include fx:id="dashboard" source="Dashboard.fxml"/>
+                <fx:include fx:id="dashboard" source="Dashboard.fxml" />
             </content>
             </Tab>
-          <Tab text="Kalender" >
+          <Tab text="Kalender">
               <content>
-                  <fx:include fx:id="kalender" source="Kalender.fxml"/>
+                  <fx:include fx:id="kalender" source="Kalender.fxml" />
               </content>
           </Tab>
-          <Tab text="Module" >
+          <Tab text="Module">
               <content>
-                  <fx:include fx:id="module" source="Module.fxml"/>
+                  <fx:include fx:id="module" source="Module.fxml" />
               </content>
           </Tab>
-            <Tab text="ToDo" >
+            <Tab text="ToDo">
                 <content>
-                    <fx:include fx:id="toDo" source="ToDo.fxml"/>
+                    <fx:include fx:id="toDo" source="ToDo.fxml" />
                 </content>
             </Tab>
-            <Tab text="Stundenplan" >
+            <Tab text="Stundenplan">
                 <content>
-                    <fx:include fx:id="stundenplan" source="Stundenplan.fxml"/>
+                    <fx:include fx:id="stundenplan" source="Stundenplan.fxml" />
                 </content>
             </Tab>
-            <Tab text="Mensaplan" >
+            <Tab text="Mensaplan">
                 <content>
-                    <fx:include fx:id="mensaplan" source="Mensaplan.fxml"/>
+                    <fx:include fx:id="mensaplan" source="Mensaplan.fxml" />
                 </content>
             </Tab>
-            <Tab text="Klausurplan" >
+            <Tab text="Klausurplan">
                 <content>
-                    <fx:include fx:id="klausurplan" source="Klausurplan.fxml"/>
+                    <fx:include fx:id="klausurplan" source="Klausurplan.fxml" />
                 </content>
             </Tab>
-            <Tab text="Notenübersicht" >
+            <Tab text="Notenübersicht">
                 <content>
-                    <fx:include fx:id="noten" source="Noten.fxml"/>
+                    <fx:include fx:id="noten" source="Noten.fxml" />
                 </content>
             </Tab>
         </tabs>
