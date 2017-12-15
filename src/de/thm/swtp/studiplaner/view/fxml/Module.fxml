@@ -1,167 +1,76 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.shape.*?>
-<?import javafx.scene.text.*?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TableColumn?>
-<?import javafx.scene.control.TableView?>
-<?import javafx.scene.layout.BorderPane?>
-<?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.shape.Line?>
-<?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="542.0" prefWidth="1366.0" stylesheets="@../css/application.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.thm.swtp.studiplaner.controller.Module_Controller">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="542.0" prefWidth="1366.0" stylesheets="@../css/application.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.thm.swtp.studiplaner.controller.Module_Controller">
    <children>
-      <Label fx:id="modulueberschrift" layoutX="43.0" layoutY="14.0" prefHeight="141.0" prefWidth="750.0" text="TEST_MODUL">
-         <font>
-            <Font size="64.0" />
-         </font>
+      <Label fx:id="modulueberschrift" layoutX="43.0" layoutY="14.0" prefHeight="108.0" prefWidth="370.0" styleClass="subheader" text="TEST_MODUL">
       </Label>
       <Line endX="1230.0" layoutX="115.0" layoutY="130.0" startX="-100.0" />
-      <Label layoutX="507.0" layoutY="64.0" text="Hier Modul auswählen:" />
-      <Label layoutX="56.0" layoutY="142.0" prefHeight="53.0" prefWidth="224.0" text="Moduldaten:">
-         <font>
-            <Font size="24.0" />
-         </font>
+      <Label layoutX="422.0" layoutY="61.0" text="Hier Modul auswählen:" />
+      <Label layoutX="56.0" layoutY="142.0" prefHeight="58.0" prefWidth="248.0" styleClass="subheader" text="Moduldaten:">
       </Label>
       <Label layoutX="56.0" layoutY="211.0" text="Bezeichnung">
-         <font>
-            <Font size="14.0" />
-         </font>
       </Label>
-      <TextField fx:id="bezeichnung" layoutX="205.0" layoutY="207.0">
-         <font>
-            <Font size="14.0" />
-         </font>
+      <TextField fx:id="bezeichnung" layoutX="239.0" layoutY="212.0">
       </TextField>
-      <TextField fx:id="dozent" layoutX="205.0" layoutY="256.0">
-         <font>
-            <Font size="14.0" />
-         </font>
+      <TextField fx:id="dozent" layoutX="239.0" layoutY="261.0">
       </TextField>
       <Label layoutX="56.0" layoutY="260.0" text="Dozent">
-         <font>
-            <Font size="14.0" />
-         </font>
       </Label>
-      <TextField fx:id="raum" layoutX="205.0" layoutY="304.0">
-         <font>
-            <Font size="14.0" />
-         </font>
+      <TextField fx:id="raum" layoutX="239.0" layoutY="309.0">
       </TextField>
       <Label layoutX="56.0" layoutY="308.0" text="Raum">
-         <font>
-            <Font size="14.0" />
-         </font>
       </Label>
-      <TextField fx:id="vorlesungsdatum" layoutX="205.0" layoutY="357.0">
-         <font>
-            <Font size="14.0" />
-         </font>
+      <TextField fx:id="vorlesungsdatum" layoutX="239.0" layoutY="362.0">
       </TextField>
       <Label layoutX="56.0" layoutY="361.0" text="Vorlesungsdatum">
-         <font>
-            <Font size="14.0" />
-         </font>
       </Label>
-      <TextField fx:id="creditpoints" layoutX="205.0" layoutY="411.0">
-         <font>
-            <Font size="14.0" />
-         </font>
+      <TextField fx:id="creditpoints" layoutX="239.0" layoutY="413.0">
       </TextField>
-      <Label layoutX="56.0" layoutY="415.0" text="Creditpoints">
-         <font>
-            <Font size="14.0" />
-         </font>
+      <Label layoutX="56.0" layoutY="412.0" text="Creditpoints">
       </Label>
       <Label layoutX="643.0" layoutY="167.0" text="Notizen">
-         <font>
-            <Font size="14.0" />
-         </font>
       </Label>
       <TextArea fx:id="notizen" layoutX="718.0" layoutY="163.0" prefHeight="260.0" prefWidth="568.0" />
-      <Button fx:id="modul_add" layoutX="863.0" layoutY="60.0" mnemonicParsing="false" onAction="#AddModul" prefHeight="25.0" prefWidth="150.0" text="Modul Hinzufügen" />
-      <Button fx:id="modul_remove" layoutX="1130.0" layoutY="60.0" mnemonicParsing="false" onAction="#DeleteModul" prefHeight="25.0" prefWidth="150.0" text="Modul Löschen" />
-      <ComboBox fx:id="modulauswahl" layoutX="643.0" layoutY="60.0" prefWidth="150.0" />
+      <Button fx:id="modul_add" layoutX="863.0" layoutY="60.0" mnemonicParsing="false" onAction="#AddModul" prefHeight="44.0" prefWidth="202.0" styleClass="menubutton" stylesheets="@../css/application.css" text="Modul Hinzufügen" />
+      <Button fx:id="modul_remove" layoutX="1130.0" layoutY="60.0" mnemonicParsing="false" onAction="#DeleteModul" prefHeight="44.0" prefWidth="180.0" styleClass="menubutton" stylesheets="@../css/application.css" text="Modul Löschen" />
+      <ComboBox fx:id="modulauswahl" layoutX="643.0" layoutY="60.0" prefWidth="150.0" stylesheets="@../css/application.css" />
       <Label layoutX="56.0" layoutY="461.0" text="Note">
-         <font>
-            <Font size="14.0" />
-         </font>
       </Label>
-      <TextField fx:id="note" layoutX="205.0" layoutY="457.0">
-         <font>
-            <Font size="14.0" />
-         </font>
+      <TextField fx:id="note" layoutX="239.0" layoutY="462.0">
       </TextField>
-      <Button fx:id="speichern_bezeichnung" layoutX="408.0" layoutY="206.0" mnemonicParsing="false" onAction="#SaveButtonAction" text="Speichern">
-         <font>
-            <Font size="14.0" />
-         </font>
+      <Button fx:id="speichern_bezeichnung" layoutX="442.0" layoutY="211.0" mnemonicParsing="false" onAction="#SaveButtonAction" styleClass="menubutton" text="Speichern">
       </Button>
-      <Button fx:id="speichern_dozent" layoutX="408.0" layoutY="256.0" mnemonicParsing="false" onAction="#SaveButtonAction" text="Speichern">
-         <font>
-            <Font size="14.0" />
-         </font>
+      <Button fx:id="speichern_dozent" layoutX="442.0" layoutY="261.0" mnemonicParsing="false" onAction="#SaveButtonAction" styleClass="menubutton" text="Speichern">
       </Button>
-      <Button fx:id="speichern_raum" layoutX="408.0" layoutY="304.0" mnemonicParsing="false" onAction="#SaveButtonAction" text="Speichern">
-         <font>
-            <Font size="14.0" />
-         </font>
+      <Button fx:id="speichern_raum" layoutX="442.0" layoutY="309.0" mnemonicParsing="false" onAction="#SaveButtonAction" styleClass="menubutton" text="Speichern">
       </Button>
-      <Button fx:id="speichern_vorlesungsdatum" layoutX="408.0" layoutY="356.0" mnemonicParsing="false" onAction="#SaveButtonAction" text="Speichern">
-         <font>
-            <Font size="14.0" />
-         </font>
+      <Button fx:id="speichern_vorlesungsdatum" layoutX="442.0" layoutY="361.0" mnemonicParsing="false" onAction="#SaveButtonAction" styleClass="menubutton" text="Speichern">
       </Button>
-      <Button fx:id="speichern_creditpoints" layoutX="408.0" layoutY="411.0" mnemonicParsing="false" onAction="#SaveButtonAction" text="Speichern">
-         <font>
-            <Font size="14.0" />
-         </font>
+      <Button fx:id="speichern_creditpoints" layoutX="442.0" layoutY="413.0" mnemonicParsing="false" onAction="#SaveButtonAction" styleClass="menubutton" text="Speichern">
       </Button>
-      <Button fx:id="speichern_note" layoutX="408.0" layoutY="457.0" mnemonicParsing="false" onAction="#SaveButtonAction" text="Speichern">
-         <font>
-            <Font size="14.0" />
-         </font>
+      <Button fx:id="speichern_note" layoutX="442.0" layoutY="462.0" mnemonicParsing="false" onAction="#SaveButtonAction" styleClass="menubutton" text="Speichern">
       </Button>
-      <Button fx:id="loeschen_dozent" layoutX="493.0" layoutY="256.0" mnemonicParsing="false" onAction="#DeleteButtonAction" text="Löschen">
-         <font>
-            <Font size="14.0" />
-         </font>
+      <Button fx:id="loeschen_dozent" layoutX="574.0" layoutY="261.0" mnemonicParsing="false" onAction="#DeleteButtonAction" styleClass="menubutton" text="Löschen">
       </Button>
-      <Button fx:id="loeschen_raum" layoutX="493.0" layoutY="304.0" mnemonicParsing="false" onAction="#DeleteButtonAction" text="Löschen">
-         <font>
-            <Font size="14.0" />
-         </font>
+      <Button fx:id="loeschen_raum" layoutX="574.0" layoutY="309.0" mnemonicParsing="false" onAction="#DeleteButtonAction" styleClass="menubutton" text="Löschen">
       </Button>
-      <Button fx:id="loeschen_vorlesungsdatum" layoutX="493.0" layoutY="356.0" mnemonicParsing="false" onAction="#DeleteButtonAction" text="Löschen">
-         <font>
-            <Font size="14.0" />
-         </font>
+      <Button fx:id="loeschen_vorlesungsdatum" layoutX="574.0" layoutY="361.0" mnemonicParsing="false" onAction="#DeleteButtonAction" styleClass="menubutton" text="Löschen">
       </Button>
-      <Button fx:id="loeschen_creditpoints" layoutX="493.0" layoutY="411.0" mnemonicParsing="false" onAction="#DeleteButtonAction" text="Löschen">
-         <font>
-            <Font size="14.0" />
-         </font>
+      <Button fx:id="loeschen_creditpoints" layoutX="574.0" layoutY="413.0" mnemonicParsing="false" onAction="#DeleteButtonAction" styleClass="menubutton" text="Löschen">
       </Button>
-      <Button fx:id="loeschen_note" layoutX="493.0" layoutY="456.0" mnemonicParsing="false" onAction="#DeleteButtonAction" text="Löschen">
-         <font>
-            <Font size="14.0" />
-         </font>
+      <Button fx:id="loeschen_note" layoutX="574.0" layoutY="461.0" mnemonicParsing="false" onAction="#DeleteButtonAction" styleClass="menubutton" text="Löschen">
       </Button>
-      <Button fx:id="speichern_notizen" layoutX="718.0" layoutY="457.0" mnemonicParsing="false" onAction="#SaveButtonAction" text="Speichern">
-         <font>
-            <Font size="14.0" />
-         </font>
+      <Button fx:id="speichern_notizen" layoutX="718.0" layoutY="457.0" mnemonicParsing="false" onAction="#SaveButtonAction" styleClass="menubutton" stylesheets="@../css/application.css" text="Speichern">
       </Button>
-      <Button fx:id="loeschen_notizen" layoutX="801.0" layoutY="456.0" mnemonicParsing="false" onAction="#DeleteButtonAction" text="Löschen">
-         <font>
-            <Font size="14.0" />
-         </font>
+      <Button fx:id="loeschen_notizen" layoutX="850.0" layoutY="457.0" mnemonicParsing="false" onAction="#DeleteButtonAction" styleClass="menubutton" stylesheets="@../css/application.css" text="Löschen">
       </Button>
    </children>
 </AnchorPane>

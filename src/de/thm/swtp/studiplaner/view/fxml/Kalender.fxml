@@ -36,7 +36,7 @@
       </VBox>
    </top>
    <bottom>
-      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+      <VBox prefHeight="231.0" prefWidth="1370.0" BorderPane.alignment="CENTER">
          <children>
             <Line endX="100.0" endY="500.0" startX="1460.0" startY="500.0" stroke="WHITE" strokeWidth="2.0" />
          </children>
@@ -69,22 +69,22 @@
       </HBox>
    </right>
    <center>
-      <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+      <HBox prefHeight="436.0" prefWidth="970.0" BorderPane.alignment="CENTER">
          <children>
             <AnchorPane fx:id="bp" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="500.0" />
-            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="470.0">
+            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="495.0" prefWidth="470.0">
                <children>
-                  <Label layoutX="182.0" layoutY="-3.0" prefHeight="35.0" prefWidth="108.0" text="Datum wählen" textFill="WHITE">
+                  <Label layoutX="170.0" layoutY="-3.0" prefHeight="35.0" prefWidth="131.0" stylesheets="@../css/application.css" text="Datum wählen" textFill="WHITE">
                      <font>
                         <Font size="14.0" />
                      </font></Label>
-                  <TextField fx:id="outputField" layoutX="142.0" layoutY="35.0" />
-                  <Button fx:id="saveButton" layoutX="211.0" layoutY="155.0" mnemonicParsing="false" text="save" />
-                  <TextArea fx:id="thisDay" layoutX="24.0" layoutY="222.0" prefHeight="231.0" prefWidth="424.0" />
-                  <TextField fx:id="entryField" layoutX="26.0" layoutY="115.0" prefHeight="31.0" prefWidth="421.0" />
-                  <Label fx:id="thisDate" layoutX="159.0" layoutY="94.0" text="Eintrag an diesem Tag" textFill="WHITE" />
-                  <Button fx:id="showButton" layoutX="205.0" layoutY="461.0" mnemonicParsing="false" text="show" />
-                  <Label layoutX="206.0" layoutY="194.0" text="Termine" textFill="WHITE" />
+                  <TextField fx:id="outputField" layoutX="142.0" layoutY="32.0" />
+                  <Button fx:id="saveButton" layoutX="153.0" layoutY="153.0" mnemonicParsing="false" styleClass="menubutton" stylesheets="@../css/application.css" text="Termin speichern" />
+                  <TextArea fx:id="thisDay" layoutX="25.0" layoutY="276.0" prefHeight="143.0" prefWidth="424.0" />
+                  <TextField fx:id="entryField" layoutX="27.0" layoutY="109.0" prefHeight="31.0" prefWidth="421.0" />
+                  <Label fx:id="thisDate" layoutX="146.0" layoutY="80.0" stylesheets="@../css/application.css" text="Eintrag an diesem Tag" textFill="WHITE" />
+                  <Button fx:id="showButton" layoutX="152.0" layoutY="429.0" mnemonicParsing="false" styleClass="menubutton" text="Termine anzeigen" />
+                  <Label layoutX="207.0" layoutY="248.0" stylesheets="@../css/application.css" text="Termine" textFill="WHITE" />
                </children></AnchorPane>
          </children>
       </HBox>

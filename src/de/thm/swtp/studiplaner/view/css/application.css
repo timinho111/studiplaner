@@ -1,3 +1,17 @@
+.label {
+	-fx-font-family: "Oxygen Light";
+	-fx-font-size: 20px;
+	-fx-text-fill: #FFFFFF;
+}
+
+.header {
+	-fx-font-size: 70;
+}
+
+.subheader {
+	-fx-font-size: 40;
+}
+
 .menubutton {
     -fx-background-color: 
         #000000,
@@ -46,9 +60,10 @@
 	 /* later use for color picker:
 	  * light grey: linear-gradient(#ffffff 0%, #ffffff 24%, #f2f2f2 50%, #e5e5e5 79%, #a0a0a0 100%);
 	  (#3333ff 0%, #0000ff 24%, #0000cc 50%, #000099 79%, #000066 100%);
-	  * */
 	-fx-background-color:
-	linear-gradient(#3333ff 0%, #0000ff 24%, #0000cc 50%, #000099 79%, #000066 100%);
+	linear-gradient(#3333ff 0%, #0000ff 24%, #0000cc 50%, #000099 79%, #000066 100%); */
+	
+	-fx-background-color: #000000;
 
 	
 }
@@ -80,12 +95,12 @@
 
 .tab .tab-label {
     -fx-alignment: CENTER;
-    -fx-text-fill: #828282;
-    -fx-font-size: 12px;
+    -fx-text-fill: #000000;
+    -fx-font-size: 20px;
     -fx-font-weight: bold;
 }
 
 .tab:selected .tab-label {
     -fx-alignment: CENTER;
-    -fx-text-fill: #96b946;
+    -fx-text-fill: #000066;
 }
