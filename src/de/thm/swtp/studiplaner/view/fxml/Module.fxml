@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
@@ -10,7 +15,7 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="768.0" prefWidth="1366.0" styleClass="background" stylesheets="@../../application.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.thm.swtp.studiplaner.view.controllers.Module_Controller">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="768.0" prefWidth="1366.0" styleClass="background" stylesheets="@../../application.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.thm.swtp.studiplaner.view.controllers.Module_Controller">
    <top>
       <VBox prefHeight="0.0" prefWidth="0.0" BorderPane.alignment="CENTER">
          <children>
@@ -21,60 +26,11 @@
                         <Font name="Oxygen Light" size="45.0" />
                      </font>
                   </Label>
-                  <Label alignment="TOP_RIGHT" contentDisplay="CENTER" prefHeight="100.0" prefWidth="650.0" text="StudiPlaner" textAlignment="RIGHT" textFill="WHITE">
-                     <font>
-                        <Font name="Oxygen Regular" size="96.0" />
-                     </font>
-                  </Label>
                </children>
             </HBox>
             <VBox alignment="TOP_RIGHT" prefHeight="34.0" prefWidth="1372.0">
                <children>
                   <Line startX="1366.0" stroke="WHITE" strokeWidth="4.0" />
-                  <HBox alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" nodeOrientation="LEFT_TO_RIGHT" opacity="0.8" prefHeight="40.0" prefWidth="1366.0" styleClass="vbox">
-                     <children>
-                        <Button fx:id="dashboard_button" alignment="TOP_CENTER" contentDisplay="TOP" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#ButtonAction" prefHeight="45.0" prefWidth="158.0" styleClass="menubutton" stylesheets="@../../application.css" text="Dashboard" textAlignment="CENTER" HBox.hgrow="ALWAYS">
-                           <font>
-                              <Font name="Oxygen Light" size="20.0" />
-                           </font>
-                        </Button>
-                        <Button fx:id="kalender_button" alignment="TOP_CENTER" contentDisplay="TOP" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#ButtonAction" prefHeight="45.0" prefWidth="174.0" styleClass="menubutton" stylesheets="@../../application.css" text="Kalender" textAlignment="CENTER" HBox.hgrow="ALWAYS">
-                           <font>
-                              <Font name="Oxygen Light" size="20.0" />
-                           </font>
-                        </Button>
-                        <Button fx:id="module_button" alignment="TOP_CENTER" contentDisplay="TOP" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#ButtonAction" prefHeight="45.0" prefWidth="164.0" stylesheets="@../../application.css" text="Module" textAlignment="CENTER" HBox.hgrow="ALWAYS">
-                           <font>
-                              <Font name="Oxygen Light" size="20.0" />
-                           </font>
-                        </Button>
-                        <Button fx:id="todo_button" alignment="TOP_CENTER" contentDisplay="TOP" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#ButtonAction" prefHeight="45.0" prefWidth="146.0" styleClass="menubutton" text="ToDo" textAlignment="CENTER" HBox.hgrow="ALWAYS">
-                           <font>
-                              <Font name="Oxygen Light" size="20.0" />
-                           </font>
-                        </Button>
-                        <Button fx:id="stundenplan_button" alignment="TOP_CENTER" contentDisplay="TOP" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#ButtonAction" prefHeight="45.0" prefWidth="174.0" styleClass="menubutton" text="Stundenplan" textAlignment="CENTER" HBox.hgrow="ALWAYS">
-                           <font>
-                              <Font name="Oxygen Light" size="20.0" />
-                           </font>
-                        </Button>
-                        <Button fx:id="mensaplan_button" alignment="TOP_CENTER" contentDisplay="TOP" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#ButtonAction" prefHeight="45.0" prefWidth="172.0" styleClass="menubutton" stylesheets="@../../application.css" text="Mensaplan" textAlignment="CENTER" HBox.hgrow="ALWAYS">
-                           <font>
-                              <Font name="Oxygen Light" size="20.0" />
-                           </font>
-                        </Button>
-                        <Button fx:id="klausurplan_button" alignment="TOP_CENTER" contentDisplay="TOP" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#ButtonAction" prefHeight="45.0" prefWidth="172.0" styleClass="menubutton" stylesheets="@../../application.css" text="Klausurplan" textAlignment="CENTER" HBox.hgrow="ALWAYS">
-                           <font>
-                              <Font name="Oxygen Light" size="20.0" />
-                           </font>
-                        </Button>
-                        <Button fx:id="noten_button" alignment="TOP_CENTER" contentDisplay="TOP" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#ButtonAction" prefHeight="45.0" prefWidth="206.0" styleClass="menubutton" text="Notenübersicht" textAlignment="CENTER" HBox.hgrow="ALWAYS">
-                           <font>
-                              <Font name="Oxygen Light" size="20.0" />
-                           </font>
-                        </Button>
-                     </children>
-                  </HBox>
                   <Line startX="1366.0" stroke="WHITE" strokeWidth="4.0" />
                </children>
             </VBox>
