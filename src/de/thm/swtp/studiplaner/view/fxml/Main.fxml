@@ -19,7 +19,7 @@
                                 <Font size="96.0" />
                             </font>
                         </Label>
-                  <Label alignment="TOP_RIGHT" prefHeight="144.0" prefWidth="834.0" text="Hallo XXX !">
+                  <Label fx:id="benutzer" alignment="TOP_RIGHT" prefHeight="144.0" prefWidth="834.0" text="Hallo XXX !">
                      <font>
                         <Font size="36.0" />
                      </font>
