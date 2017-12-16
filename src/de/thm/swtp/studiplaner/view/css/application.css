@@ -25,12 +25,19 @@
     -fx-background-radius: 1;
 }
 
+#stundenplan_table{
+    -fx-background-color: #0F0F0F;
+    -fx-text-fill: white;
+    -fx-text-background-color: white;
+}
 
 .label {
 	-fx-font-family: "Oxygen Light";
 	-fx-font-size: 20px;
 	-fx-text-fill: #FFFFFF;
 }
+
+
 
 .header {
 	-fx-font-size: 70;

@@ -433,11 +433,11 @@ public class Module_Controller implements Initializable{
     public void initialize(URL location, ResourceBundle resources)
     {
 
-      Modul modul1=new Modul("Modulname1", "Dozent1", "A1","08:00", 5, 1.2F, "HALLO WELT! ICH BIN MODUL1");
-        Modul modul2=new Modul("Modulname2", "Dozent1", "B2","09:45", 6);
-        Modul modul3=new Modul("Modulname3", "Dozent1", "C3","11:30", 7, 2.2F);
-        Modul modul4=new Modul("Modulname4", "Dozent1", "A5","14:00", 8, 5.0F, "HALLO WELT! ICH BIN MODUL4");
-        Modul modul5=new Modul("Modulname5", "Dozent1", "B7","15:40", 4, 4.0F, "HALLO WELT! ICH BIN MODUL5");
+      Modul modul1=new Modul("SWTP", "Edelmann", "A1","14.00", 8, 5.0F, "Tolles Modul. Macht Spaß! ヽ(◉◡◔)ﾉ " );
+        Modul modul2=new Modul("SE", "Meyer zu Bexten", "B2","09:45", 6, 2.1F,"Immer ergonomisch bleiben!");
+        Modul modul3=new Modul("DB", "Ritz", "C3","11:30", 6, 0F, "Was würde man nur ohne Datenbanken machen?");
+        Modul modul4=new Modul("KN", "Behrens", "A5","14:00", 5, 5.0F, "ICH KANN DAS NICHT");
+        Modul modul5=new Modul("PIA", "Demuth", "B7","15:40", 6, 4.0F, "Endlich etwas nützliches!");
         //List<String> modulliste;
         //Modulverwaltung modulverwaltung=new Modulverwaltung(modul1,modul2,modul3,modul4,modul5);
 
