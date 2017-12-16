@@ -52,11 +52,11 @@ public class Stundenplan_Controller implements Initializable{
     {
 
         ObservableList<Stundenplan> data= FXCollections.observableArrayList(
-                new Stundenplan("08:00-09:30", "DB", "GD", "", "PIA ÜBUNG", "","",""),
+                new Stundenplan("08:00-09:30", "DB", "GD", "", "PIA UEBUNG", "","",""),
                 new Stundenplan("09:45-11:15", "DB", "WSK", "LA", "NG", "","",""),
-                new Stundenplan("11:30-13:00", "DB ÜBUNG", "WSK", "LA ÜBUNG", "PIA", "","",""),
-                new Stundenplan("14:00-15:30","", "NG ÜBUNG", "","", "PG","",""),
-                new Stundenplan("15:40-17:10", "", "", "", "PG ÜBUNG", "","",""),
+                new Stundenplan("11:30-13:00", "DB UEBUNG", "WSK", "LA UEBUNG", "PIA", "","",""),
+                new Stundenplan("14:00-15:30","", "NG UEBUNG", "","", "PG","",""),
+                new Stundenplan("15:40-17:10", "", "", "", "PG UEBUNG", "","",""),
                 new Stundenplan("17:20-18:50", "NG", "", "", "", "","",""),
                 new Stundenplan("19:30-20:30", "", "", "", "", "","",""));
 

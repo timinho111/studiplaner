@@ -1,20 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.shape.*?>
-<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Hyperlink?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TableColumn?>
-<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
-<?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.VBox?>
-<?import javafx.scene.shape.Line?>
-<?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="768.0" prefWidth="1366.0" styleClass="background" stylesheets="@../css/application.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.thm.swtp.studiplaner.controller.Dashboard_Controller">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="768.0" prefWidth="1366.0" styleClass="background" stylesheets="@../css/application.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.thm.swtp.studiplaner.controller.Dashboard_Controller">
    <center>
       <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <children>
@@ -24,8 +16,8 @@
             <ListView fx:id="listView" layoutX="53.0" layoutY="97.0" prefHeight="150.0" prefWidth="611.0" />
             <Label layoutX="53.0" layoutY="301.0" text="Termine morgen" />
             <ListView fx:id="listView1" layoutX="53.0" layoutY="345.0" prefHeight="150.0" prefWidth="611.0" />
-            <Hyperlink layoutX="547.0" layoutY="275.0" prefHeight="23.0" prefWidth="136.0" text="Termin hinzufügen" />
-            <Hyperlink layoutX="547.0" layoutY="523.0" prefHeight="23.0" prefWidth="136.0" text="Termin hinzufügen" />
+            <Hyperlink layoutX="547.0" layoutY="275.0" prefHeight="23.0" prefWidth="136.0" text="Termin hinzufügen" textFill="WHITE" />
+            <Hyperlink layoutX="547.0" layoutY="523.0" prefHeight="23.0" prefWidth="136.0" text="Termin hinzufügen" textFill="WHITE" />
             <Hyperlink layoutX="1185.0" layoutY="523.0" prefHeight="23.0" prefWidth="136.0" text="Termin hinzufügen" />
          </children>
       </AnchorPane>
