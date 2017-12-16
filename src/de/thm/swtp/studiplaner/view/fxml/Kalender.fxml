@@ -4,7 +4,6 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
-<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
@@ -80,11 +79,15 @@
                      </font></Label>
                   <TextField fx:id="outputField" layoutX="142.0" layoutY="32.0" />
                   <Button fx:id="saveButton" layoutX="153.0" layoutY="153.0" mnemonicParsing="false" styleClass="menubutton" stylesheets="@../css/application.css" text="Termin speichern" />
-                  <TextArea fx:id="thisDay" layoutX="25.0" layoutY="276.0" prefHeight="143.0" prefWidth="424.0" />
                   <TextField fx:id="entryField" layoutX="27.0" layoutY="109.0" prefHeight="31.0" prefWidth="421.0" />
                   <Label fx:id="thisDate" layoutX="146.0" layoutY="80.0" stylesheets="@../css/application.css" text="Eintrag an diesem Tag" textFill="WHITE" />
-                  <Button fx:id="showButton" layoutX="152.0" layoutY="429.0" mnemonicParsing="false" styleClass="menubutton" text="Termine anzeigen" />
                   <Label layoutX="207.0" layoutY="248.0" stylesheets="@../css/application.css" text="Termine" textFill="WHITE" />
+                  <TableView fx:id="tableTermin" editable="true" layoutX="25.0" layoutY="220.0" prefHeight="248.0" prefWidth="420.0" styleClass="table" stylesheets="@../css/application.css">
+                    <columns>
+                      <TableColumn fx:id="tableDate" prefWidth="125.0" text="Datum" />
+                      <TableColumn fx:id="tableEntry" prefWidth="293.0" text="Eintrag" />
+                    </columns>
+                  </TableView>
                </children></AnchorPane>
          </children>
       </HBox>

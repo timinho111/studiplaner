@@ -1,3 +1,31 @@
+.table {
+	-fx-background-color: #0F0F0F;
+	-fx-text-fill: white;
+	-fx-text-background-color: white;
+}
+.table .column-header-background .column-header{
+	-fx-background-color: #0C0C0C;
+}
+
+.table-row-cell{
+    -fx-background-color: -fx-table-cell-border-color, #616161;
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-padding: 0.0em; /* 0 */
+}
+
+.table-row-cell:odd{
+    -fx-background-color: -fx-table-cell-border-color, #424242;
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-padding: 0.0em; /* 0 */  
+}
+
+.table-row-cell:selected {
+    -fx-background-color: #005797;
+    -fx-background-insets: 0;
+    -fx-background-radius: 1;
+}
+
+
 .label {
 	-fx-font-family: "Oxygen Light";
 	-fx-font-size: 20px;

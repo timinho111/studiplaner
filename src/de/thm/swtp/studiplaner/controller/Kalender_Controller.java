@@ -9,24 +9,29 @@ import java.util.ResourceBundle;
 
 import com.sun.javafx.scene.control.skin.DatePickerContent;
 import com.sun.javafx.scene.control.skin.DatePickerSkin;
+import com.sun.prism.impl.Disposer.Record;
 
 import de.thm.swtp.studiplaner.model.Termin;
+import de.thm.swtp.studiplaner.model.editTable;
+import javafx.collections.ObservableList;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.control.Button;
 import javafx.scene.control.DateCell;
 import javafx.scene.control.DatePicker;
-import javafx.scene.control.TextArea;
+import javafx.scene.control.TableCell;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
+import javafx.util.Callback;
 
 public class Kalender_Controller implements Initializable{
-
-	// Kalender Instanz erstellen
-	private List<Termin> terminliste = new ArrayList<Termin>();
 
 	@FXML
 	AnchorPane bp;
@@ -44,9 +49,19 @@ public class Kalender_Controller implements Initializable{
 	Button showButton;
 	
 	@FXML
-	TextArea thisDay;
+	TableView<Termin> tableTermin;
+	
+	@FXML
+	TableColumn<Termin, String> tableDate;
+	
+	@FXML
+	TableColumn<Termin, String> tableEntry;
+	
+	
+	
+	
 
-	// DateCells zuweisen
+	// DateCells einlesen
 	private static List<DateCell> getAllDateCells(DatePickerContent content)
 	{
      List<DateCell> result = new ArrayList<>();
@@ -74,20 +89,20 @@ public class Kalender_Controller implements Initializable{
     @Override
     public void initialize(URL location, ResourceBundle resources)
     {
-    	// Format DateTime
+    	// Datum und Zeit formatieren
     	DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd LLLL yyyy");
     	
-    	// Show Calendar
+    	// Kalender anzeigen
         DatePickerSkin datePickerSkin = new DatePickerSkin(new DatePicker(LocalDate.now()));
         DatePickerContent pop = (DatePickerContent)datePickerSkin.getPopupContent();
    	 	Node popupContent = datePickerSkin.getPopupContent();
    	 	bp.getChildren().add(popupContent);
    	 	
-   	 	// Resize bp
+   	 	// Anchorpane einrichten
    	 	bp.setTopAnchor(popupContent, 100.0);
    	 	bp.setRightAnchor(popupContent, 100.0);
    	 	
-
+   	 	// Daten zu Zellen zuweisen
         List<DateCell> dateCells = getAllDateCells(pop);
 
         for (DateCell cell : dateCells)
@@ -101,16 +116,47 @@ public class Kalender_Controller implements Initializable{
         }
         
         saveButton.addEventHandler(MouseEvent.MOUSE_PRESSED, (e) ->
-        {	terminliste.add(new Termin(outputField.getText(), entryField.getText()));});
+        {	
+        	// Liste der Termine erstellen
+        	ObservableList<Termin> data = tableTermin.getItems();
+        	// Tabelle der Liste zuweisen
+        	tableTermin.setItems(data);
+        	// Spaltenbezug herstellen
+        	tableDate.setCellValueFactory(new PropertyValueFactory("Date"));
+        	tableEntry.setCellValueFactory(new PropertyValueFactory("Entry"));
+        	// Daten hinzufügen
+        	data.add(new Termin(outputField.getText(), entryField.getText()));
+        	// Felder leeren
+        	outputField.clear();
+        	entryField.clear();
+        });
         
-        showButton.addEventHandler(MouseEvent.MOUSE_PRESSED, (e) ->
-        { 
-        	thisDay.clear();
-        	
-        	for (Termin t : terminliste) {
-        	thisDay.appendText(t.toString() + "\n");;}
-		    
-		});
-
+        // Callback für Editieren einrichten
+    	Callback<TableColumn<Termin, String>, TableCell<Termin, String>> cellFactory =
+                new Callback<TableColumn<Termin, String>, TableCell<Termin,String>>() {
+                    public TableCell call(TableColumn p) {
+                        return new editTable();
+                    }
+                };
+        
+        // Date bearbeiten
+        tableDate.setCellFactory(cellFactory);
+        tableDate.setOnEditCommit(
+                new EventHandler<TableColumn.CellEditEvent<Termin, String>>() {
+                    @Override public void handle(TableColumn.CellEditEvent<Termin, String> t) {
+                        ((Termin)t.getTableView().getItems().get(
+                                t.getTablePosition().getRow())).setDate(t.getNewValue());
+                    }
+                });
+        // Entry bearbeiten
+        tableEntry.setCellFactory(cellFactory);
+        tableEntry.setOnEditCommit(
+                new EventHandler<TableColumn.CellEditEvent<Termin, String>>() {
+                    @Override public void handle(TableColumn.CellEditEvent<Termin, String> t) {
+                        ((Termin)t.getTableView().getItems().get(
+                                t.getTablePosition().getRow())).setDate(t.getNewValue());
+                    }
+                });
+        
     }
 }
