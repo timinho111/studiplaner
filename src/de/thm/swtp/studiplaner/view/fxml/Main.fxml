@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="768.0" prefWidth="1366.0" styleClass="background" stylesheets="@../css/application.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.thm.swtp.studiplaner.controller.Controller">
+    <top>
+        <VBox prefHeight="113.0" prefWidth="1366.0" BorderPane.alignment="CENTER">
+            <children>
+                <HBox prefHeight="100.0" prefWidth="200.0">
+                    <children>
+                        <Label alignment="TOP_LEFT" prefHeight="141.0" prefWidth="503.0" styleClass="header" stylesheets="@../css/application.css" text="StudiPlaner">
+                            <font>
+                                <Font size="96.0" />
+                            </font>
+                        </Label>
+                  <Label fx:id="benutzer" alignment="TOP_RIGHT" prefHeight="144.0" prefWidth="834.0" text="Hallo XXX !">
+                     <font>
+                        <Font size="36.0" />
+                     </font>
+                  </Label>
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+    </top>
+   <center>
+      <TabPane prefHeight="625.0" prefWidth="1366.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+        <tabs>
+            <Tab text="Dashboard">
+            <content>
+                <fx:include fx:id="dashboard" source="Dashboard.fxml" />
+            </content>
+            </Tab>
+          <Tab text="Kalender">
+              <content>
+                  <fx:include fx:id="kalender" source="Kalender.fxml" />
+              </content>
+          </Tab>
+          <Tab text="Module">
+              <content>
+                  <fx:include fx:id="module" source="Module.fxml" />
+              </content>
+          </Tab>
+            <Tab text="ToDo">
+                <content>
+                    <fx:include fx:id="toDo" source="ToDo.fxml" />
+                </content>
+            </Tab>
+            <Tab text="Stundenplan">
+                <content>
+                    <fx:include fx:id="stundenplan" source="Stundenplan.fxml" />
+                </content>
+            </Tab>
+            <Tab text="Mensaplan">
+                <content>
+                    <fx:include fx:id="mensaplan" source="Mensaplan.fxml" />
+                </content>
+            </Tab>
+            <Tab text="Klausurplan">
+                <content>
+                    <fx:include fx:id="klausurplan" source="Klausurplan.fxml" />
+                </content>
+            </Tab>
+            <Tab text="Notenübersicht">
+                <content>
+                    <fx:include fx:id="noten" source="Noten.fxml" />
+                </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </center>
+</BorderPane>

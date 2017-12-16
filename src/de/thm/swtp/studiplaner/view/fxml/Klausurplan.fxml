@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="768.0" prefWidth="1366.0" styleClass="background" stylesheets="@../css/application.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.thm.swtp.studiplaner.controller.Klausurplan_Controller">
+   <top>
+      <VBox prefHeight="0.0" prefWidth="0.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label alignment="BOTTOM_RIGHT" prefHeight="188.0" prefWidth="716.0">
+                     <font>
+                        <Font name="Oxygen Light" size="45.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <VBox alignment="TOP_RIGHT" prefHeight="34.0" prefWidth="1372.0">
+               <children>
+                  <Line startX="1366.0" stroke="WHITE" strokeWidth="4.0" />
+                  <Line startX="1366.0" stroke="WHITE" strokeWidth="4.0" />
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+   </top>
+   <bottom>
+      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <Line endX="100.0" endY="500.0" startX="1460.0" startY="500.0" stroke="WHITE" strokeWidth="2.0" />
+         </children>
+      </VBox>
+   </bottom>
+   <left>
+      <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <TableView opacity="0.18" prefHeight="533.0" prefWidth="200.0">
+              <columns>
+                <TableColumn prefWidth="75.0" text="C1" />
+                <TableColumn prefWidth="75.0" text="C2" />
+              </columns>
+            </TableView>
+            <Line startY="-500.0" stroke="WHITE" strokeWidth="2.0" />
+         </children>
+      </HBox>
+   </left>
+   <right>
+      <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Line startY="-500.0" stroke="WHITE" strokeWidth="2.0" />
+            <TableView opacity="0.18" prefHeight="533.0" prefWidth="200.0">
+               <columns>
+                  <TableColumn prefWidth="75.0" text="C1" />
+                  <TableColumn prefWidth="75.0" text="C2" />
+               </columns>
+            </TableView>
+         </children>
+      </HBox>
+   </right>
+</BorderPane>
