@@ -85,7 +85,7 @@
          </font>
       </Label>
       <TextArea fx:id="notizen" layoutX="718.0" layoutY="163.0" prefHeight="260.0" prefWidth="568.0" />
-      <Button fx:id="modul_add" layoutX="863.0" layoutY="60.0" mnemonicParsing="false" onAction="#AddModul" prefHeight="25.0" prefWidth="150.0" text="Modul Hinzufügen" />
+      <Button fx:id="modul_add" layoutX="834.0" layoutY="60.0" mnemonicParsing="false" onAction="#AddModul" prefHeight="25.0" prefWidth="150.0" text="Modul Hinzufügen" />
       <Button fx:id="modul_remove" layoutX="1130.0" layoutY="60.0" mnemonicParsing="false" onAction="#DeleteModul" prefHeight="25.0" prefWidth="150.0" text="Modul Löschen" />
       <ComboBox fx:id="modulauswahl" layoutX="643.0" layoutY="60.0" prefWidth="150.0" />
       <Label layoutX="56.0" layoutY="461.0" text="Note">
@@ -163,5 +163,6 @@
             <Font size="14.0" />
          </font>
       </Button>
+      <Button fx:id="reset" layoutX="1004.0" layoutY="60.0" mnemonicParsing="false" onAction="#ResetButtonAction" text="Eingaben löschen" />
    </children>
 </AnchorPane>

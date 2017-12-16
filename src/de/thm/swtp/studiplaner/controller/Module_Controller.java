@@ -12,6 +12,9 @@ import java.util.ResourceBundle;
 
 import de.thm.swtp.studiplaner.model.Modul;
 import de.thm.swtp.studiplaner.model.Modulverwaltung;
+import javafx.beans.binding.Bindings;
+import javafx.beans.property.ListProperty;
+import javafx.beans.property.SimpleListProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -28,14 +31,36 @@ import javafx.util.converter.IntegerStringConverter;
 
 public class Module_Controller implements Initializable{
 
-    ObservableList<Modul> module_object;
-    ObservableList<String> module;
+
+
+
+
+
+    private ObservableList<Modul> module_object;
+    private ObservableList<String> module;
+    //protected ListProperty<String> listProperty=new SimpleListProperty<>();
+
+
+    public void setModule_object(ObservableList<Modul> module_object) {
+        this.module_object = module_object;
+    }
+
+    public void setModule(ObservableList<String> module)
+    {
+        modulauswahl.getItems().clear();
+        this.module=module;
+        modulauswahl.getItems().addAll(this.module);
+    }
+
 
     @FXML
-    private  Label modulueberschrift;
+      Label modulueberschrift;
 
     @FXML
     private Button modul_add;
+
+    @FXML
+    private Button reset;
 
     @FXML
     private Button modul_remove;
@@ -62,7 +87,7 @@ public class Module_Controller implements Initializable{
     private TextArea notizen;
 
     @FXML
-    private ComboBox<String> modulauswahl=new ComboBox<>();
+    public ComboBox<String> modulauswahl;
 
     @FXML
     private Button speichern_bezeichnung;
@@ -106,7 +131,7 @@ public class Module_Controller implements Initializable{
     @FXML
     private Button loeschen_notizen;
 
-    @FXML
+   /* @FXML
     private TextField add_bezeichnung;
 
     @FXML
@@ -129,8 +154,14 @@ public class Module_Controller implements Initializable{
 
     @FXML
     private Button add_reset;
+*/
 
-
+    public void addItem(Modul m)
+    {
+        module_object.add(m);
+        module.add(m.getName());
+        modulauswahl.getItems().add(m.getName());
+    }
 
     @FXML
     protected void SaveButtonAction(ActionEvent event)
@@ -223,7 +254,7 @@ public class Module_Controller implements Initializable{
     @FXML
     protected void AddModul(ActionEvent event) throws IOException
     {
-        try{
+/*        try{
             FXMLLoader fxmlLoader= new FXMLLoader(getClass().getResource("/de/thm/swtp/studiplaner/view/fxml/Modul_Dialog.fxml"));
             Parent root1 = (Parent) fxmlLoader.load();
             Stage stage = new Stage();
@@ -231,9 +262,23 @@ public class Module_Controller implements Initializable{
             stage.show();
         } catch(Exception e) {
             e.printStackTrace();
-        }
+        }*/
+        int creditpoints_int=creditpoints.getText()!=null?new IntegerStringConverter().fromString(creditpoints.getText()):0;
+        float note_float=note.getText()!=null?new FloatStringConverter().fromString(note.getText()):0;
+        Modul m=new Modul(
+                bezeichnung.getText(),
+                dozent.getText(),
+                raum.getText(),
+                vorlesungsdatum.getText(),
+                creditpoints_int,
+                note_float);
 
+        module_object.add(m);
+        module.add(m.getName());
+        modulauswahl.getItems().add(m.getName());
     }
+
+
 
     @FXML
     protected void DeleteModul(ActionEvent event)
@@ -252,9 +297,6 @@ public class Module_Controller implements Initializable{
                 }
             }
         }
-
-
-
         }
 
 
@@ -346,16 +388,19 @@ public class Module_Controller implements Initializable{
     }
 
 
-    @FXML
+/*    @FXML
     protected void Add_SaveButtonAction(ActionEvent event)
     {
+        int creditpoints=add_creditpoints.getText()!=null?new IntegerStringConverter().fromString(add_creditpoints.getText()):0;
+        float note=add_note.getText()!=null?new FloatStringConverter().fromString(add_note.getText()):0;
+
         Modul m=new Modul(
                 add_bezeichnung.getText(),
                 add_dozent.getText(),
                 add_raum.getText(),
                 add_vorlesungsdatum.getText(),
-                new IntegerStringConverter().fromString(add_creditpoints.getText()),
-                new FloatStringConverter().fromString(add_note.getText()));
+                creditpoints,
+                note);
         module_object.add(m);
         module.add(m.getName());
         modulauswahl.getItems().add(m.getName());
@@ -370,26 +415,23 @@ public class Module_Controller implements Initializable{
         //modulauswahl.getItems().clear();
         //modulauswahl.getItems().addAll(module);
 
-    }
+    }*/
 
     @FXML
-    protected void Add_DeleteButtonAction(ActionEvent event)
+    protected void ResetButtonAction(ActionEvent event)
     {
-        add_bezeichnung.clear();
-        add_dozent.clear();
-        add_raum.clear();
-        add_vorlesungsdatum.clear();
-        add_creditpoints.clear();
-        add_note.clear();
+        bezeichnung.clear();
+        dozent.clear();
+        raum.clear();
+        vorlesungsdatum.clear();
+        creditpoints.clear();
+        note.clear();
     }
-
-
 
 
     @Override
     public void initialize(URL location, ResourceBundle resources)
     {
-
 
       Modul modul1=new Modul("Modulname1", "Dozent1", "A1","08:00", 5, 1.2F, "HALLO WELT! ICH BIN MODUL1");
         Modul modul2=new Modul("Modulname2", "Dozent1", "B2","09:45", 6);
@@ -402,12 +444,13 @@ public class Module_Controller implements Initializable{
 
         module_object=FXCollections.observableArrayList(modul1,modul2,modul3,modul4,modul5);
         module= FXCollections.observableArrayList(modul1.getName(),modul2.getName(),modul3.getName(),modul4.getName(),modul5.getName());
-
+        //modulauswahl.itemsProperty().bind(listProperty);
+        //listProperty.setValue(module);
+        //Bindings.bindContentBidirectional(module,modul_dialog_controller.getModule_child());
+        //Bindings.bindContentBidirectional(module_object,modul_dialog_controller.GetModule_object_child());
+        //System.out.println("ICH BIN IN INIT!!!!");
         modulauswahl.setPromptText("Modul auswählen");
         modulauswahl.getItems().addAll(module);
-
-
-
 
         modulauswahl.getSelectionModel().selectedItemProperty().addListener((v, oldValue, newValue) ->{
                 if(newValue!=null)
@@ -418,20 +461,15 @@ public class Module_Controller implements Initializable{
                 if(m.getName()!=null)bezeichnung.setText(m.getName()); else bezeichnung.setText("Leer");
                 modulueberschrift.setText(m.getName());
                 if(m.getDozent()!= null)dozent.setText(m.getDozent()); else dozent.setText("Leer");
-                if(m.getRaum()!= null)raum.setText(m.getRaum()); else dozent.setText("Leer");
+                if(m.getRaum()!= null)raum.setText(m.getRaum()); else raum.setText("Leer");
                 if(m.getZeit()!= null)vorlesungsdatum.setText(m.getZeit()); else vorlesungsdatum.setText("Leer");
                 if(m.getCp()!= 0)creditpoints.setText(new IntegerStringConverter().toString(m.getCp())); else creditpoints.setText("Leer");
                 if(m.getNote()!=0) note.setText(new FloatStringConverter().toString(m.getNote())); else note.setText("Leer");
                 if(m.getNotizen()!=null) notizen.setText(m.getNotizen()); else notizen.setText("Leer");
-
             }
         }
     }
-
         });
-
-
-
     }
 }
 
